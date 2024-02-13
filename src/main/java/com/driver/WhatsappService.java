@@ -26,7 +26,7 @@ public class WhatsappService {
         }
         else{
             int groupCount = whatsappRepository.getCustomGroupCount();
-            group = new Group("Group"+(groupCount+1),count);
+            group = new Group("Group "+(groupCount+1),count);
             whatsappRepository.setCustomGroupCount(groupCount+1);
         }
         whatsappRepository.createGroup(group,users);
